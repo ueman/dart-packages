@@ -1,0 +1,24 @@
+name: dio_image_provider
+description: An image provider which makes use of package:dio to instead of dart:io
+version: 0.0.2
+repository: https://github.com/ueman/image_provider/dio_image_provider
+issue_tracker: https://github.com/ueman/image_provider/issues
+
+topics: 
+  - cupertino-http
+  - cronet-http
+  - image-provider
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
+
+dependencies:
+  dio: ^5.3.0
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
