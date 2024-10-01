@@ -1,0 +1,23 @@
+name: example
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0-259.9.beta < 3.0.0'
+  flutter: '>=1.26.0-17.6.pre'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  splash:
+    path: ../../splash
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
