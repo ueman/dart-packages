@@ -1,3 +1,7 @@
+## 0.2.2
+
+- Compatibility with Sentry v8
+
 ## 0.2.1
 
 - Add in-depth article about distributed tracing to readme
