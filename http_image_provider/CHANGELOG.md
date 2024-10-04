@@ -1,3 +1,7 @@
+## 1.0.0
+
+* Remove `HttpImage`, since it was already deprecated for quite a while
+
 ## 0.0.3
 
 * Rename `HttpImage` to `HttpImageProvider`
