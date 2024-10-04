@@ -48,3 +48,10 @@ These are the packages hosted in this repository:
 | [splash](./splash/)                           | [![pub package](https://img.shields.io/pub/v/splash.svg)](https://pub.dev/packages/splash)                           | [![pub points](https://img.shields.io/pub/points/splash)](https://pub.dev/packages/splash/score)                           | [![popularity](https://img.shields.io/pub/popularity/splash)](https://pub.dev/packages/splash/score)                           |
 | [sentry_link](./sentry_link/)                 | [![pub package](https://img.shields.io/pub/v/sentry_link.svg)](https://pub.dev/packages/sentry_link)                 | [![pub points](https://img.shields.io/pub/points/sentry_link)](https://pub.dev/packages/sentry_link/score)                 | [![popularity](https://img.shields.io/pub/popularity/sentry_link)](https://pub.dev/packages/sentry_link/score)                 |
 | [sentry_dart_frog](./sentry_dart_frog/)       | [![pub package](https://img.shields.io/pub/v/sentry_dart_frog.svg)](https://pub.dev/packages/sentry_dart_frog)       | [![pub points](https://img.shields.io/pub/points/sentry_dart_frog)](https://pub.dev/packages/sentry_dart_frog/score)       | [![popularity](https://img.shields.io/pub/popularity/sentry_dart_frog)](https://pub.dev/packages/sentry_dart_frog/score)       |
+
+The following packages are deprecated and no longer maintained:
+
+- [dio_image_provider](./dio_image_provider/)
+- [sentry_connectivity](./sentry_connectivity/)
+- [sentry_flutter_plus](./sentry_flutter_plus/)
+- [sentry_plus](./sentry_plus/)
