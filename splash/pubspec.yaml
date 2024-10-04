@@ -1,6 +1,6 @@
 name: splash
 description: This package contains a few InkSplash and InkRipple alternatives for a better UI
-version: 1.1.0
+version: 1.2.0
 repository: https://github.com/ueman/dart-packages
 issue_tracker: https://github.com/ueman/dart-packages/issues
 
