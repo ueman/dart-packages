@@ -1,3 +1,7 @@
+## 0.5.2
+
+- Metadata updates
+
 ## 0.5.1
 
 - Fix various pub score issues
