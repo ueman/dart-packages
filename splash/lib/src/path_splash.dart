@@ -50,10 +50,10 @@ class _PathRippleFactory extends InteractiveInkFeatureFactory {
 class PathSplash extends InteractiveInkFeature {
   PathSplash({
     required MaterialInkController controller,
-    required RenderBox referenceBox,
+    required super.referenceBox,
     required Color color,
     required TextDirection textDirection,
-    VoidCallback? onRemoved,
+    super.onRemoved,
     required this.path,
     Paint? customPaint,
     required this.clip,
@@ -70,9 +70,7 @@ class PathSplash extends InteractiveInkFeature {
         _radius = radius,
         super(
           controller: controller,
-          referenceBox: referenceBox,
           color: color,
-          onRemoved: onRemoved,
         ) {
     _progressController = AnimationController(
       duration: _kProgressDuration,

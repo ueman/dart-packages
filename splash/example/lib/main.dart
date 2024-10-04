@@ -6,6 +6,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -146,7 +148,7 @@ class MyHomePage extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Text(
               'Default theme with splash factory',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
           ...simpleSamples,
@@ -154,7 +156,7 @@ class MyHomePage extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Text(
               'Customized theme with splash factory',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
           ...complexSamples,
@@ -187,12 +189,12 @@ class MyHomePage extends StatelessWidget {
 }
 
 class Sample extends StatefulWidget {
-  const Sample({Key? key, required this.name}) : super(key: key);
+  const Sample({super.key, required this.name});
 
   final String name;
 
   @override
-  _SampleState createState() => _SampleState();
+  State<Sample> createState() => _SampleState();
 }
 
 class _SampleState extends State<Sample> {
@@ -250,25 +252,25 @@ class _SampleState extends State<Sample> {
       body: Column(
         children: <Widget>[
           ElevatedButton(
-            child: const Text('RaisedButton'),
             onPressed: () {},
             style: ElevatedButton.styleFrom(
               splashFactory: Theme.of(context).splashFactory,
             ),
+            child: const Text('ElevatedButton'),
           ),
           TextButton(
-            child: const Text('FlatButton'),
             onPressed: () {},
             style: TextButton.styleFrom(
               splashFactory: Theme.of(context).splashFactory,
             ),
+            child: const Text('TextButton'),
           ),
           OutlinedButton(
-            child: const Text('OutlineButton'),
             onPressed: () {},
             style: OutlinedButton.styleFrom(
               splashFactory: Theme.of(context).splashFactory,
             ),
+            child: const Text('OutlineButton'),
           ),
           IconButton(
             icon: const Icon(Icons.settings),

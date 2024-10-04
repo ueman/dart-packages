@@ -1,3 +1,7 @@
+## [1.2.0]
+
+- Fixes various deprecation lints
+
 ## [1.1.0]
 
 - Deprecate NoSplash, please use https://api.flutter.dev/flutter/material/NoSplash-class.html

@@ -34,15 +34,13 @@ class _LineSplashFactory extends InteractiveInkFeatureFactory {
 class LineSplash extends InteractiveInkFeature {
   LineSplash({
     required MaterialInkController controller,
-    required RenderBox referenceBox,
+    required super.referenceBox,
     required Color color,
-    VoidCallback? onRemoved,
+    super.onRemoved,
     Paint? newPaint,
   }) : super(
           controller: controller,
-          referenceBox: referenceBox,
           color: color,
-          onRemoved: onRemoved,
         ) {
     // Start animation as soon as possible
     _progressController = AnimationController(
@@ -97,7 +95,7 @@ class LineSplash extends InteractiveInkFeature {
 
   @override
   void paintFeature(Canvas canvas, Matrix4 transform) {
-    // TODO: add support for rtl
+    // TODO(any): add support for rtl
 
     final progress = _progressAnimation.value;
     if (progress == 0) {

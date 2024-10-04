@@ -1,8 +1,6 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:splash/splash.dart';
 
 import 'package:splash/splash.dart' as splash;
@@ -99,7 +97,7 @@ class _WaveSplashFactory extends InteractiveInkFeatureFactory {
 class WaveSplash extends InteractiveInkFeature {
   WaveSplash({
     required MaterialInkController controller,
-    required RenderBox referenceBox,
+    required super.referenceBox,
     required TextDirection textDirection,
     required Offset position,
     required Color color,
@@ -108,7 +106,7 @@ class WaveSplash extends InteractiveInkFeature {
     BorderRadius? borderRadius,
     ShapeBorder? customBorder,
     double? radius,
-    VoidCallback? onRemoved,
+    super.onRemoved,
   })  : _position = position,
         _borderRadius = borderRadius ?? BorderRadius.zero,
         _customBorder = customBorder,
@@ -119,11 +117,7 @@ class WaveSplash extends InteractiveInkFeature {
             _getClipCallback(referenceBox, containedInkWell, rectCallback),
         _repositionToReferenceBox = !containedInkWell,
         _textDirection = textDirection,
-        super(
-            controller: controller,
-            referenceBox: referenceBox,
-            color: color,
-            onRemoved: onRemoved) {
+        super(controller: controller, color: color) {
     _radiusController = AnimationController(
         duration: _kUnconfirmedSplashDuration, vsync: controller.vsync)
       ..addListener(controller.markNeedsPaint)
@@ -209,12 +203,13 @@ class WaveSplash extends InteractiveInkFeature {
       ..strokeWidth = 30;
 
     Offset center = _position;
-    if (_repositionToReferenceBox)
+    if (_repositionToReferenceBox) {
       center = Offset.lerp(
         center,
         referenceBox.size.center(Offset.zero),
         _radiusController.value,
       )!;
+    }
 
     paintBlurredCircle(
       canvas: canvas,
