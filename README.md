@@ -55,3 +55,8 @@ The following packages are deprecated and no longer maintained:
 - [sentry_connectivity](./sentry_connectivity/)
 - [sentry_flutter_plus](./sentry_flutter_plus/)
 - [sentry_plus](./sentry_plus/)
+
+The following packages are also from me, but not in this repo:
+
+- [feedback](https://github.com/ueman/feedback)
+- [passkit packages](https://github.com/ueman/passkit)
