@@ -1,0 +1,70 @@
+name: 🐞 Bug Report
+description: Describe the problem
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: Platform
+      description: Which platform has the issue? Select all that apply
+      options:
+        - label: Dart
+        - label: Dart Web
+        - label: Flutter Android
+        - label: Flutter iOS
+        - label: Flutter Windows
+        - label: Flutter Linux
+        - label: Flutter macOS
+        - label: Flutter Web
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Which version of Flutter do you use?
+      placeholder: 1.2.3 ← should look like this
+    validations:
+      required: true
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      description: Which package has a bug?
+      options:
+        - http_image_provider
+        - referrer
+        - sentry_dart_frog
+        - sentry_link
+        - splash
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to Reproduce
+      description: How can we see what you're seeing? Specific is terrific.
+      placeholder: |-
+        1. foo
+        2. bar
+        3. baz
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+      description: Logs? Screenshots? Yes, please.
+    validations:
+      required: true
