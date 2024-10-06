@@ -20,13 +20,22 @@ body:
       required: true
 
   - type: input
-    id: version
+    id: flutter-version
     attributes:
-      label: Version
+      label: Flutter Version
       description: Which version of Flutter do you use?
       placeholder: 1.2.3 ← should look like this
     validations:
-      required: true
+      required: false # Not all libraries are Flutter specific
+
+  - type: input
+    id: dart-version
+    attributes:
+      label: Dart Version
+      description: Which version of Dart do you use?
+      placeholder: 1.2.3 ← should look like this
+    validations:
+      required: true # All libraries use Dart
 
   - type: dropdown
     id: package
