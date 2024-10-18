@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "referrer",
     platforms: [
-        .iOS("11.0"),
+        .iOS("12.0"),
     ],
     products: [
         .library(name: "referrer", targets: ["referrer"])
