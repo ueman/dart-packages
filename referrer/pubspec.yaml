@@ -1,6 +1,6 @@
 name: referrer
 description: "A Flutter plugin to read various referrer information for incoming deeplinks"
-version: 1.0.0
+version: 1.1.0
 repository: https://github.com/ueman/dart-packages
 issue_tracker: https://github.com/ueman/dart-packages/issues
 
