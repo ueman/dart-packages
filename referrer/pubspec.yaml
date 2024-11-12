@@ -4,6 +4,17 @@ version: 1.1.0
 repository: https://github.com/ueman/dart-packages
 issue_tracker: https://github.com/ueman/dart-packages/issues
 
+topics:
+ - referrer
+ - analytics
+ - deeplinks
+ - app-links
+ - universal-links
+ - web-to-app
+
+funding:
+  - https://github.com/sponsors/ueman
+
 environment:
   sdk: '>=3.3.0 <4.0.0'
   flutter: '>=3.3.0'

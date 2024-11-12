@@ -4,6 +4,9 @@ version: 1.2.0
 repository: https://github.com/ueman/dart-packages
 issue_tracker: https://github.com/ueman/dart-packages/issues
 
+funding:
+  - https://github.com/sponsors/ueman
+
 environment:
   sdk: ^3.0.0
   flutter: '>=2.0.0'
