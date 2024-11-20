@@ -1,5 +1,12 @@
 # Sentry for dart_frog
 
+<p align="center">
+  <a href="https://twitter.com/ue_man"><img src="https://img.shields.io/twitter/follow/ue_man?style=social" alt="Twitter Follow"></a>
+  <a href="https://github.com/ueman"><img src="https://img.shields.io/github/followers/ueman?style=social" alt="GitHub followers"></a>
+  <a href="https://bsky.app/profile/uekoetter.dev"><img src="https://img.shields.io/badge/Follow%20on%20Bluesky-08f" alt="TBluesky Follow"></a>
+  <a href="https://github.com/sponsors/ueman"><img src="https://img.shields.io/badge/Sponsor-30363D?style=flat&logo=GitHub-Sponsors&logoColor=#EA4AAA" alt="GitHub Sponsor"></a>
+</p>
+
 This is an integration for [`dart_frog`](https://pub.dev/packages/dart_frog) to collects errors and performance traces automatically.
 
 Learn more in this [article](https://medium.com/@jonasuekoetter/bridging-the-gap-distributed-tracing-for-flutter-and-backend-4943799b0ea9).

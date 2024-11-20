@@ -7,6 +7,13 @@
   <a href="https://pub.dev/packages/referrer/score"><img src="https://img.shields.io/pub/points/referrer" alt="pub points"></a>
 </p>
 
+<p align="center">
+  <a href="https://twitter.com/ue_man"><img src="https://img.shields.io/twitter/follow/ue_man?style=social" alt="Twitter Follow"></a>
+  <a href="https://github.com/ueman"><img src="https://img.shields.io/github/followers/ueman?style=social" alt="GitHub followers"></a>
+  <a href="https://bsky.app/profile/uekoetter.dev"><img src="https://img.shields.io/badge/Follow%20on%20Bluesky-08f" alt="TBluesky Follow"></a>
+  <a href="https://github.com/sponsors/ueman"><img src="https://img.shields.io/badge/Sponsor-30363D?style=flat&logo=GitHub-Sponsors&logoColor=#EA4AAA" alt="GitHub Sponsor"></a>
+</p>
+
 This is a plugin which allows you to read various referrer information.
 
 A referrer is the URL of the webpage (or app) that caused the app to be opened via a deep link.

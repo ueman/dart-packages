@@ -4,11 +4,16 @@
 
 <p align="center">
   <a href="https://pub.dartlang.org/packages/splash"><img src="https://img.shields.io/pub/v/splash.svg" alt="pub.dev"></a>
-  <a href="https://github.com/ueman/splash/actions?query=workflow%3Abuild"><img src="https://github.com/ueman/splash/workflows/build/badge.svg?branch=master" alt="GitHub Workflow Status"></a>
-  <a href="https://github.com/ueman#sponsor-me"><img src="https://img.shields.io/github/sponsors/ueman" alt="Sponsoring"></a>
   <a href="https://pub.dev/packages/splash/score"><img src="https://img.shields.io/pub/likes/splash" alt="likes"></a>
   <a href="https://pub.dev/packages/splash/score"><img src="https://img.shields.io/pub/popularity/splash" alt="popularity"></a>
   <a href="https://pub.dev/packages/splash/score"><img src="https://img.shields.io/pub/points/splash" alt="pub points"></a>
+</p>
+
+<p align="center">
+  <a href="https://twitter.com/ue_man"><img src="https://img.shields.io/twitter/follow/ue_man?style=social" alt="Twitter Follow"></a>
+  <a href="https://github.com/ueman"><img src="https://img.shields.io/github/followers/ueman?style=social" alt="GitHub followers"></a>
+  <a href="https://bsky.app/profile/uekoetter.dev"><img src="https://img.shields.io/badge/Follow%20on%20Bluesky-08f" alt="TBluesky Follow"></a>
+  <a href="https://github.com/sponsors/ueman"><img src="https://img.shields.io/badge/Sponsor-30363D?style=flat&logo=GitHub-Sponsors&logoColor=#EA4AAA" alt="GitHub Sponsor"></a>
 </p>
 
 ---
