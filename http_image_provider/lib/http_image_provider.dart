@@ -1,12 +1,13 @@
 library http_image_provider;
 
 import 'dart:async';
+import 'dart:io';
 import 'dart:ui' as ui;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-
 import 'package:http/http.dart';
+import 'package:http_image_provider/consolidate_response.dart';
 
 /// Fetches the given URL from the network, associating it with the given scale.
 ///
@@ -60,8 +61,15 @@ class HttpImageProvider extends ImageProvider<HttpImageProvider> {
   @override
   ImageStreamCompleter loadImage(
       HttpImageProvider key, ImageDecoderCallback decode) {
+    // Ownership of this controller is handed off to [_loadAsync]; it is that
+    // method's responsibility to close the controller's stream when the image
+    // has been loaded or an error is thrown.
+    final StreamController<ImageChunkEvent> chunkEvents =
+        StreamController<ImageChunkEvent>();
+
     return MultiFrameImageStreamCompleter(
-      codec: _loadAsync(key, decode),
+      codec: _loadAsync(key, chunkEvents, decode),
+      chunkEvents: chunkEvents.stream,
       scale: key.scale,
       debugLabel: key.url.toString(),
       informationCollector: () => <DiagnosticsNode>[
@@ -73,26 +81,43 @@ class HttpImageProvider extends ImageProvider<HttpImageProvider> {
 
   Future<ui.Codec> _loadAsync(
     HttpImageProvider key,
+    StreamController<ImageChunkEvent> chunkEvents,
     ImageDecoderCallback decode,
   ) async {
     try {
       assert(key == this);
 
-      final response = await client.get(url, headers: headers);
+      final request = Request('GET', url);
+      final addHeaders = headers;
+      if (addHeaders != null) {
+        request.headers.addAll(addHeaders);
+      }
+      final response = await client.send(request);
 
-      if (response.statusCode != 200) {
+      if (response.statusCode != HttpStatus.ok) {
+        // The network may be only temporarily unavailable, or the file will be
+        // added on the server later. Avoid having future calls to resolve
+        // fail to check the network again.
+        await response.stream.drain<List<int>>(<int>[]);
         throw NetworkImageLoadException(
           uri: url,
           statusCode: response.statusCode,
         );
       }
 
-      final bytes = response.bodyBytes;
+      final bytes = await consolidateStreamedResponseBytes(
+        response,
+        onBytesReceived: (int cumulative, int? total) {
+          chunkEvents.add(
+            ImageChunkEvent(
+              cumulativeBytesLoaded: cumulative,
+              expectedTotalBytes: total,
+            ),
+          );
+        },
+      );
       if (bytes.lengthInBytes == 0) {
-        throw NetworkImageLoadException(
-          uri: url,
-          statusCode: response.statusCode,
-        );
+        throw Exception('NetworkImage is an empty file: $url');
       }
 
       final buffer = await ui.ImmutableBuffer.fromUint8List(bytes);
@@ -105,6 +130,8 @@ class HttpImageProvider extends ImageProvider<HttpImageProvider> {
         PaintingBinding.instance.imageCache.evict(key);
       });
       rethrow;
+    } finally {
+      chunkEvents.close();
     }
   }
 
@@ -123,5 +150,5 @@ class HttpImageProvider extends ImageProvider<HttpImageProvider> {
 
   @override
   String toString() =>
-      '${objectRuntimeType(this, 'HttpImageProvider')}("$url", scale: $scale)';
+      '${objectRuntimeType(this, 'HttpImageProvider')}("$url", scale: ${scale.toStringAsFixed(1)})';
 }
