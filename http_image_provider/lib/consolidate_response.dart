@@ -1,15 +1,13 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:http/http.dart';
 
-export 'dart:io' show HttpClientResponse;
 export 'dart:typed_data' show Uint8List;
 
 /// Signature for getting notified when chunks of bytes are received while
-/// consolidating the bytes of an [HttpClientResponse] into a [Uint8List].
+/// consolidating the bytes of an [StreamedResponse] into a [Uint8List].
 ///
 /// The `cumulative` parameter will contain the total number of bytes received
 /// thus far. If the response has been gzipped, this number will be the number
@@ -23,10 +21,10 @@ export 'dart:typed_data' show Uint8List;
 /// returned to the client and the total size of the response may not be known
 /// until the request has been fully processed).
 ///
-/// This is used in [consolidateHttpClientResponseBytes].
+/// This is used in [consolidateStreamedResponseBytes].
 typedef BytesReceivedCallback = void Function(int cumulative, int? total);
 
-/// Efficiently converts the response body of an [HttpClientResponse] into a
+/// Efficiently converts the response body of an [StreamedResponse] into a
 /// [Uint8List].
 ///
 /// The future returned will forward any error emitted by `response`.

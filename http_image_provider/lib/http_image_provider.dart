@@ -1,7 +1,6 @@
 library http_image_provider;
 
 import 'dart:async';
-import 'dart:io';
 import 'dart:ui' as ui;
 
 import 'package:flutter/foundation.dart';
@@ -94,7 +93,7 @@ class HttpImageProvider extends ImageProvider<HttpImageProvider> {
       }
       final response = await client.send(request);
 
-      if (response.statusCode != HttpStatus.ok) {
+      if (response.statusCode != 200) {
         // The network may be only temporarily unavailable, or the file will be
         // added on the server later. Avoid having future calls to resolve
         // fail to check the network again.
