@@ -1,6 +1,6 @@
 name: http_image_provider
 description: An image provider which makes use of package:http to instead of dart:io
-version: 1.0.0
+version: 1.1.0
 repository: https://github.com/ueman/dart-packages
 issue_tracker: https://github.com/ueman/dart-packages/issues
 

@@ -1,5 +1,3 @@
-library http_image_provider;
-
 import 'dart:async';
 import 'dart:ui' as ui;
 
@@ -116,12 +114,15 @@ class HttpImageProvider extends ImageProvider<HttpImageProvider> {
         },
       );
       if (bytes.lengthInBytes == 0) {
-        throw Exception('NetworkImage is an empty file: $url');
+        throw NetworkImageLoadException(
+          uri: url,
+          statusCode: response.statusCode,
+        );
       }
 
       final buffer = await ui.ImmutableBuffer.fromUint8List(bytes);
       return decode(buffer);
-    } catch (e) {
+    } catch (_) {
       // Depending on where the exception was thrown, the image cache may not
       // have had a chance to track the key in the cache at all.
       // Schedule a microtask to give the cache a chance to add the key.
