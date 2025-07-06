@@ -1,7 +1,13 @@
 name: dynamic_island_watermark
-description: "A new Flutter package project."
+description: "Show a watermark behind the dynamic island on supported iPhone models"
 version: 1.0.0
-homepage:
+repository: https://github.com/ueman/dart-packages
+issue_tracker: https://github.com/ueman/dart-packages/issues
+
+topics:
+  - dynamic-island
+  - watermark
+  - iPhone
 
 environment:
   sdk: ^3.6.0
