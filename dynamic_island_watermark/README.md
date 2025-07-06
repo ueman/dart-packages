@@ -7,7 +7,7 @@
   <a href="https://pub.dev/packages/dynamic_island_watermark/score"><img src="https://img.shields.io/pub/points/dynamic_island_watermark" alt="pub points"></a>
 </p>
 
-A Flutter package that adds a subtle watermark on screenshots behind the Dynamic Island on supported iPhone models. Perfect for growth-hacking or adding helpful information in screenshots.
+A Flutter package that adds a subtle watermark on screenshots behind the Dynamic Island on supported iPhone models. Perfect for growth-hacking or adding helpful information in screenshots. This package does nothing on devices without a dynamic island.
 
 ## Motivation
 
@@ -56,14 +56,17 @@ void main() {
 
 ## Demo
 
-<video controls>
-  <source src="https://github.com/ueman/dart-packages/raw/213a8b0d7b6c5aecf48db9749f81b105fb0f8b31/dynamic_island_watermark/media/example.mov" type="video/mp4">
-</video>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ueman/dart-packages/1beada19c1e8b20cf8df47346d6fc1c16923f867/dynamic_island_watermark/media/example.gif" width="250" alt="Example GIF">
+</p>
 
 ## Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
 
-## License
+## 📣 About the author
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+- [![Twitter Follow](https://img.shields.io/twitter/follow/ue_man?style=social)](https://twitter.com/ue_man)
+- [![GitHub followers](https://img.shields.io/github/followers/ueman?style=social)](https://github.com/ueman)
+- [![Bluesky Follow](https://img.shields.io/badge/Follow%20on%20Bluesky-08f)](https://bsky.app/profile/uekoetter.dev)
+- [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-30363D?style=flat&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/ueman)

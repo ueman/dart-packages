@@ -1,8 +1,11 @@
 name: dynamic_island_watermark
 description: "Show a watermark behind the dynamic island on supported iPhone models"
-version: 1.0.0
+version: 1.0.0+1
 repository: https://github.com/ueman/dart-packages
 issue_tracker: https://github.com/ueman/dart-packages/issues
+
+funding:
+  - https://github.com/sponsors/ueman
 
 topics:
   - dynamic-island
