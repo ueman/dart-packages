@@ -56,7 +56,9 @@ void main() {
 
 ## Demo
 
-![](https://github.com/ueman/dart-packages/raw/213a8b0d7b6c5aecf48db9749f81b105fb0f8b31/dynamic_island_watermark/media/example.mov)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ueman/dart-packages/1beada19c1e8b20cf8df47346d6fc1c16923f867/dynamic_island_watermark/media/example.gif" width="250" alt="Example GIF">
+</p>
 
 ## Contributing
 
