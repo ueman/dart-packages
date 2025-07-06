@@ -7,7 +7,7 @@
   <a href="https://pub.dev/packages/dynamic_island_watermark/score"><img src="https://img.shields.io/pub/points/dynamic_island_watermark" alt="pub points"></a>
 </p>
 
-A Flutter package that adds a subtle watermark behind the Dynamic Island on supported iPhone models. Perfect for growth-hacking or adding helpful information in screenshots.
+A Flutter package that adds a subtle watermark on screenshots behind the Dynamic Island on supported iPhone models. Perfect for growth-hacking or adding helpful information in screenshots.
 
 ## Motivation
 
@@ -57,7 +57,7 @@ void main() {
 ## Demo
 
 <video controls>
-  <source src="video.mov" type="video/mp4">
+  <source src="https://github.com/ueman/dart-packages/raw/213a8b0d7b6c5aecf48db9749f81b105fb0f8b31/dynamic_island_watermark/media/example.mov" type="video/mp4">
 </video>
 
 ## Contributing
