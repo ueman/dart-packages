@@ -60,6 +60,19 @@ void main() {
   <img src="https://raw.githubusercontent.com/ueman/dart-packages/1beada19c1e8b20cf8df47346d6fc1c16923f867/dynamic_island_watermark/media/example.gif" width="250" alt="Example GIF">
 </p>
 
+# Recommendations and tips
+
+### ✅ Do's
+
+- Only display your brand or application logo—otherwise you risk store-submission issues.
+
+### ❌ Don’ts
+
+- Avoid placing extraneous visuals (especially ads). Only display your brand or application logo—otherwise you risk store-submission issues.
+- Never embed important or sensitive information in the watermark widget. Assume users won’t even notice it.
+- Don’t add tap callbacks to widgets positioned under hardware barriers. Users won’t be able to interact with them.
+- Don’t use the watermark if your app’s top app bar is already crowded with elements. It will make the UI look overloaded.
+
 ## Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
