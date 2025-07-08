@@ -1,6 +1,6 @@
 name: sentry_dart_frog
 description: Sentry integration for dart_frog. Capture errors and trace performance
-version: 0.2.2
+version: 0.3.0
 repository: https://github.com/ueman/dart-packages/
 issue_tracker: https://github.com/ueman/dart-packages/issues
 
