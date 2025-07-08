@@ -1,3 +1,8 @@
+## 0.3.0
+
+- Compatibility with Sentry `^9.0.0`
+- Bump the minimum Dart version to `3.5.0`
+
 ## 0.2.2
 
 - Compatibility with Sentry v8
