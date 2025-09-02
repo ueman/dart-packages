@@ -141,9 +141,9 @@ class _IslandWatermarkState extends State<_IslandWatermark> {
   }
 
   bool _isPortrait() {
-    final mediaQuery = MediaQuery.maybeOf(context);
-    if (mediaQuery != null) {
-      return mediaQuery.orientation == Orientation.portrait;
+    final orientation = MediaQuery.maybeOrientationOf(context);
+    if (orientation != null) {
+      return orientation == Orientation.portrait;
     }
 
     final view = View.maybeOf(context);
@@ -152,8 +152,8 @@ class _IslandWatermarkState extends State<_IslandWatermark> {
       return size.height >= size.width;
     }
 
-    // Default to portrait if we cannot determine orientation safely.
-    return true;
+    // Default to not showing when orientation cannot be determined.
+    return false;
   }
 }
 
