@@ -100,6 +100,13 @@ class _IslandWatermarkState extends State<_IslandWatermark> {
 
     if (config == null) return SizedBox.shrink();
 
+    // Only show the watermark when the device is in portrait orientation.
+    // In landscape (or any other) orientations, the Dynamic Island placement
+    // does not make sense and can cause visual artifacts.
+    final isPortrait = _isPortrait();
+
+    if (!isPortrait) return SizedBox.shrink();
+
     return Positioned(
       top: config.top,
       height: config.height,
@@ -131,6 +138,22 @@ class _IslandWatermarkState extends State<_IslandWatermark> {
       'iPhone 14 Pro Max' => _DynamicIslandConfig.iPhone15ProMax,
       _ => null,
     };
+  }
+
+  bool _isPortrait() {
+    final mediaQuery = MediaQuery.maybeOf(context);
+    if (mediaQuery != null) {
+      return mediaQuery.orientation == Orientation.portrait;
+    }
+
+    final view = View.maybeOf(context);
+    if (view != null) {
+      final size = view.physicalSize;
+      return size.height >= size.width;
+    }
+
+    // Default to portrait if we cannot determine orientation safely.
+    return true;
   }
 }
 
