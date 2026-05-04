@@ -112,8 +112,7 @@ class _IslandWatermarkState extends State<_IslandWatermark> {
       height: config.height,
       left: config.horizontal,
       right: config.horizontal,
-      // TODO(ueman): Use ClipRSuperellipse eventually?
-      child: ClipRRect(
+      child: ClipRSuperellipse(
         //clipBehavior: Clip.none, // Can be enabled/disbled for better testing
         borderRadius: BorderRadius.all(Radius.circular(config.borderRadius)),
         child: Directionality(
@@ -126,6 +125,10 @@ class _IslandWatermarkState extends State<_IslandWatermark> {
 
   _DynamicIslandConfig? _getConfig(String modelName) {
     return switch (modelName) {
+      'iPhone 17' => _DynamicIslandConfig.iPhone17,
+      'iPhone Air' => _DynamicIslandConfig.iPhoneAir,
+      'iPhone 17 Pro' => _DynamicIslandConfig.iPhone17Pro,
+      'iPhone 17 Pro Max' => _DynamicIslandConfig.iPhone17ProMax,
       'iPhone 16 Pro' => _DynamicIslandConfig.iPhone16Pro,
       'iPhone 16 Pro Max' => _DynamicIslandConfig.iPhone16ProMax,
       'iPhone 16' => _DynamicIslandConfig.iPhone16,
@@ -158,6 +161,10 @@ class _IslandWatermarkState extends State<_IslandWatermark> {
 }
 
 enum _DynamicIslandConfig {
+  iPhone17(top: 14, height: 36, horizontal: 138, borderRadius: 25),
+  iPhoneAir(top: 20, height: 36, horizontal: 149, borderRadius: 25),
+  iPhone17Pro(top: 14, height: 36, horizontal: 138, borderRadius: 25),
+  iPhone17ProMax(top: 14, height: 36, horizontal: 156, borderRadius: 25),
   iPhone16(top: 12, height: 36, horizontal: 134, borderRadius: 20),
   iPhone16Plus(top: 12, height: 36, horizontal: 153, borderRadius: 20),
   iPhone16Pro(top: 14, height: 36, horizontal: 139, borderRadius: 25),
